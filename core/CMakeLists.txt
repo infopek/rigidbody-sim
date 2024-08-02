@@ -6,11 +6,7 @@ project(Core
     LANGUAGES CXX)  
 
 add_library(Core 
-  	src/arithmetic/add.cpp
-  	src/arithmetic/sub.cpp
-  	src/arithmetic/mul.cpp
-  	src/arithmetic/div.cpp
-  	src/printer/print.cpp)
+  	src/placeholder.cpp)
 add_library(Core::Core ALIAS Core)
 
 target_include_directories(
@@ -20,6 +16,7 @@ target_include_directories(
             $<INSTALL_INTERFACE:include>)
 
 target_link_libraries(
-    Core
-        PRIVATE
-            fmt::fmt)
+	Core
+		PRIVATE
+			glad::glad
+			glfw)

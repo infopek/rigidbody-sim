@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16..3.24)
 
 # Project details
-project(CPPTemplate 	
+project(Rigider 	
     VERSION 1.0.0
     DESCRIPTION "Project description"
     LANGUAGES CXX)     
@@ -27,9 +27,9 @@ add_subdirectory(external)
 # Subprojects
 set(as_subproject Core App Test)
 
-# Add dependencies here via find_package
-# Note: Has to be before macro definition, and only use find_package for external dependencies here!
-find_package(fmt CONFIG REQUIRED)
+# Dependencies
+find_package(glfw3 CONFIG REQUIRED)
+find_package(glad CONFIG REQUIRED)
 
 # Override default find_package with macro
 macro(find_package)
