@@ -30,6 +30,8 @@ set(as_subproject Core App Test)
 # Dependencies
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)
+find_package(glm CONFIG REQUIRED)
+find_package(GLEW REQUIRED)
 
 # Override default find_package with macro
 macro(find_package)

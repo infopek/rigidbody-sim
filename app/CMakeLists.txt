@@ -16,6 +16,8 @@ target_link_libraries(
     App 
         PUBLIC 
             Core::Core
-
-	# Dependencies
-    )
+        PRIVATE
+            glad::glad
+            glfw
+            glm::glm
+            GLEW::GLEW)

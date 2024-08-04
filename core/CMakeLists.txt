@@ -6,7 +6,14 @@ project(Core
     LANGUAGES CXX)  
 
 add_library(Core 
-  	src/placeholder.cpp)
+  	src/index_buffer.cpp
+  	src/renderer.cpp
+  	src/rigidbody.cpp
+  	src/shader.cpp
+  	src/texture.cpp
+  	src/vertex_array.cpp
+  	src/vertex_buffer_layout.cpp
+  	src/vertex_buffer.cpp)
 add_library(Core::Core ALIAS Core)
 
 target_include_directories(
@@ -19,4 +26,6 @@ target_link_libraries(
 	Core
 		PRIVATE
 			glad::glad
-			glfw)
+			glfw
+			glm::glm
+			GLEW::GLEW)
